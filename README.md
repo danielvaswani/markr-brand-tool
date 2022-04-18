@@ -10,6 +10,9 @@ npm install
 npm run serve
 ```
 
+### src/views for pages
+### src/components for components
+
 ### Compiles and minifies for production
 ```
 npm run build
