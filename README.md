@@ -12,10 +12,10 @@ npm run serve
 ```
 
 ### File structure 
-> src 
-> > router
-> > views
-> > components
+> /src 
+> > /router
+> > /views
+> > /components
 
 ### Adding a new page 
 1. Add your file ending in .vue to src/views/
