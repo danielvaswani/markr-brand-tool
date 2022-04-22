@@ -2,23 +2,23 @@
 
 ## Project setup
 ```
+git clone https://github.com/danielvaswani/markr-brand-tool.git
+cd markr-brand-tool
 npm install
 ```
-
-### Compiles and hot-reloads for development
+### Start server
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### File structure 
+> /src 
+> > /router
+> > /views
+> > /components
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Adding a new page 
+1. Add your file ending in .vue to src/views/
+2. Import it into the top of src/router/index.js
+3. Add it to const routes in src/router/index.js
+4. Add new <router-link> to src/App.vue
