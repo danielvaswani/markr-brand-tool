@@ -1,5 +1,5 @@
 <template>
-    <h1>This is assets</h1>
+    <h1>This is Imagery</h1>
 </template>
 
 <script>

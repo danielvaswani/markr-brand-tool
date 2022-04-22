@@ -1,6 +1,7 @@
 <template>
-	<h1>This is Typography</h1>
+    <h1>This is Application Examples</h1>
 </template>
+
 <script setup>
 
 </script>
