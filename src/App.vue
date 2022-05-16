@@ -10,13 +10,15 @@
         <h2>Assets</h2>
       </router-link>
     </div> -->
-    <router-view />
+    <router-view id="router-view" />
   </div>
 </template>
 
 <script setup>
 import Sidebar from "@/components/Sidebar.vue";
 
+const API =
+  process.env.ENV === "LOCAL" ? process.env.LOCAL_API : process.env.HOSTED_API;
 // export default {
 //   name: 'App',
 //   components: {
@@ -27,13 +29,9 @@ import Sidebar from "@/components/Sidebar.vue";
 </script>
 
 <style>
-:root {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-}
+@import url("https://markr-admin-server.vercel.app/api/brandguides/Johnny Walker/fonts");
+@import url("http://localhost:3000/api/brandguides/Johnny Walker/fonts");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 @font-face {
   font-family: "Gilroy Extrabold";
@@ -45,15 +43,40 @@ import Sidebar from "@/components/Sidebar.vue";
   src: local("Gilroy Light"), url(./assets/fonts/Gilroy-Light.otf);
 }
 
-#app {
-  font-family: Avenir,
-    Helvetica,
-    Arial,
-    sans-serif;
+:root {
+  --main-accent-color: #e9baed;
+  --main-primary-color: #191827;
+  --test-color: v-bind("theme.color");
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gilroy;
+  -webkit-font-smoothing: antialiased;
   text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Gilroy Light !important;
+}
+
+#app {
+  background-color: #e4e4e4;
+}
+
+#router-view {
+  background-color: #f1f2f4;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .home {
   display: flex;
+}
+
+.page-title {
+  font-size: 2rem;
 }
 </style>
